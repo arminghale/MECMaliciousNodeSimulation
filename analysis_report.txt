@@ -1,0 +1,145 @@
+================================================================================
+BYZANTINE FAULT SIMULATION ANALYSIS REPORT
+================================================================================
+
+FAULT IMPACT SUMMARY
+--------------------------------------------------------------------------------
+
+Scenario: Baseline
+  Misbehaving Servers: 0
+  Benign Servers: 500
+  Dropped Requests: 0
+  Rejected Requests: 0
+  False Reports: 0
+  Delayed Requests: 0
+  Execution Time: 478.990s
+  Speedup Factor: 0.0x
+
+Scenario: Processing Delay Attack
+  Misbehaving Servers: 50
+  Benign Servers: 450
+  Dropped Requests: 0
+  Rejected Requests: 0
+  False Reports: 0
+  Delayed Requests: 646
+  Execution Time: 476.756s
+  Speedup Factor: 0.0x
+
+Scenario: Request Dropping
+  Misbehaving Servers: 50
+  Benign Servers: 450
+  Dropped Requests: 459
+  Rejected Requests: 0
+  False Reports: 0
+  Delayed Requests: 0
+  Execution Time: 1216.020s
+  Speedup Factor: 0.0x
+
+Scenario: False Resource Reporting
+  Misbehaving Servers: 50
+  Benign Servers: 450
+  Dropped Requests: 0
+  Rejected Requests: 0
+  False Reports: 25099
+  Delayed Requests: 0
+  Execution Time: 1402.357s
+  Speedup Factor: 0.0x
+
+Scenario: Selective Service Rejection
+  Misbehaving Servers: 50
+  Benign Servers: 450
+  Dropped Requests: 0
+  Rejected Requests: 0
+  False Reports: 0
+  Delayed Requests: 0
+  Execution Time: 1697.906s
+  Speedup Factor: 0.0x
+
+Scenario: Mixed Byzantine Faults
+  Misbehaving Servers: 100
+  Benign Servers: 400
+  Dropped Requests: 260
+  Rejected Requests: 0
+  False Reports: 11852
+  Delayed Requests: 370
+  Execution Time: 2221.967s
+  Speedup Factor: 0.0x
+
+================================================================================
+EXECUTION TIME COMPARISON
+--------------------------------------------------------------------------------
+Baseline                            478.990 seconds
+Processing Delay Attack             476.756 seconds
+Request Dropping                    1216.020 seconds
+False Resource Reporting            1402.357 seconds
+Selective Service Rejection         1697.906 seconds
+Mixed Byzantine Faults              2221.967 seconds
+
+================================================================================
+RESOURCE UTILIZATION
+--------------------------------------------------------------------------------
+
+Baseline
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+Processing Delay Attack
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+Request Dropping
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+False Resource Reporting
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+Selective Service Rejection
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+Mixed Byzantine Faults
+  Avg CPU Demand: 24800.00
+  Avg Memory Demand: 99200.00
+  Avg Disk Demand: 775000.00
+  Total Services Hosted: 4000
+
+================================================================================
+DETECTED ANOMALIES & ISSUES
+--------------------------------------------------------------------------------
+
+Baseline:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+Processing Delay Attack:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+Request Dropping:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+False Resource Reporting:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+Selective Service Rejection:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+Mixed Byzantine Faults:
+  [MEDIUM] low_mobility: 5000 out of 5000 users are stationary
+
+================================================================================
+CONCLUSION
+--------------------------------------------------------------------------------
+All fault types successfully simulated and analyzed.
+Results show distinct behavioral patterns for each fault type.
+================================================================================

@@ -1,0 +1,65 @@
+{
+  "simulation": {
+    "duration": 1000,
+    "tick_duration": 1,
+    "tick_unit": "seconds"
+  },
+
+  "base_stations": [
+    {
+      "id": 1,
+      "coordinates": [0, 0],
+      "wireless_delay": 5
+    }
+  ],
+
+  "edge_servers": [
+    {
+      "id": 1,
+      "coordinates": [20, 10],
+      "cpu": 10,
+      "memory": 16,
+      "disk": 100,
+      "base_station_id": 1,
+      "type": "misbehaving",
+      "is_misbehaving": true
+    },
+    {
+      "id": 2,
+      "coordinates": [-20, -10],
+      "cpu": 10,
+      "memory": 16,
+      "disk": 100,
+      "base_station_id": 1,
+      "type": "normal"
+    }
+  ],
+
+  "applications": [
+    {
+      "id": 1,
+      "deadline": 40
+    }
+  ],
+
+  "services": [
+    {
+      "id": 1,
+      "application_id": 1,
+      "cpu_demand": 2,
+      "memory_demand": 1,
+      "disk_demand": 1
+    }
+  ],
+
+  "users": [
+    {
+      "id": 1,
+      "coordinates": [5, 5],
+      "mobility_model": "random_waypoint",
+      "mobility_speed": 1,
+      "application_id": 1,
+      "base_station_id": 1
+    }
+  ]
+}
